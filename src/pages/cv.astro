@@ -2,17 +2,15 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
 ---
-
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
   <div class="mb-5">
     <div class="text-3xl w-full font-bold">Profile</div>
   </div>
 
   <div class="mb-10 text-justify">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
-    aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Hi! I am an outdoorsy girl who also likes coding and building stuff :)<br>
+    I am currently pursuing a Master's degree in Electrical Engineering at Stanford University, with a focus in Software and Hardware Systems. I have worked as Backend and Full-Stack Engineering interns.
+    During my free time, I enjoy playing basketball, playing the violin and watching movies! I am sportive and adventurous. I love the beach, and I love dogs :D
   </div>
 
   <div class="mb-5">
@@ -21,13 +19,21 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container grid gap-4 mb-10">
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="Stanford University"
+      subtitle="M.S. in Electrical Engineering"
+      time="exp. June 2024"
+    >
+      <li class="text-sm"><b>GPA: </b>3.97 / 4.30</li>
+      <li class="text-sm"><b>Coursework: </b>Operating Systems, Parallel Computing, Computer Architecture, 3D+ Imaging Sensors, Wireless Sensing Systems</li>
+    </TimeLineElement>
     <TimeLineElement
-      title="Title Name"
-      subtitle="[start year] to [end year] at [Study Center Name], [City], [Country]"
-    />
+      title="National Taiwan University (NTU)"
+      subtitle="B.S. in Electrical Engineering"
+      time="2018 - 2022"
+    >
+      <li class="text-sm"><b>GPA: </b>4.02 / 4.30</li>
+      <li class="text-sm"><b>Coursework: </b>Algorithms, Data Structure and Programming, Embedded Systems, Web Programming</li>
+    </TimeLineElement>
   </div>
 
   <div class="mb-5">
@@ -36,22 +42,34 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <div class="time-line-container mb-10">
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Backend Engineering Intern"
+      subtitle="SPAN.io, San Francisco"
+      time="Jun - Aug, 2023"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <li class="text-sm">Designed backend modules to track the connectivity between cloud and devices</li>
+      <li class="text-sm">Deployed using <b>Micronaut</b> framework, <b>AWS MQTT events</b>, <b>Snowflake</b>, <b>Cockroach DB</b> and <b>Kafka</b></li>
+      <p class="my-2 text-justify">
+        <slot />
+      </p>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Software Engineering Intern"
+      subtitle="Dell Technologies, Taipei"
+      time="Jul - Aug, 2021"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <li class="text-sm">Deployed back-end server data queries, front-end user interface and windows shell scripts testing program</li>
+      <li class="text-sm">Developed an automation testing system for PC BIOS setup tests</li>
+      <p class="my-2 text-justify">
+        <slot />
+      </p>
     </TimeLineElement>
     <TimeLineElement
-      title="Job Title at Project or Company Name"
-      subtitle="From [Start Date] to [End Date] at [Company], [City], [Country]"
+      title="Web Developer"
+      subtitle="NTU Computer and Information Networking Center, Taipei"
+      time="Jul - Oct, 2020"
     >
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+      <li class="text-sm">Developed full-stack with <b>ReactJS</b>, <b>NodeJS</b>, <b>Python</b> and <b>MongoDB</b></li>
+      <li class="text-sm">Designed the 2020 TANET conference webpage for meal ticket exchange, session check-in and daily lottery</li>
     </TimeLineElement>
   </div>
 
@@ -61,10 +79,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">
     <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
-    </li>
-    <li>
-      <a href="#" target="_blank"> Certification Name (with link)</a>
+      <a href="https://courses.nvidia.com/certificates/fb500f6efd2846fcb438685f444e29b9/" target="_blank" style="color: rgb(0, 0, 74)">Fundamentals of Accelerated Computing with CUDA C/C++ (NVIDIA)</a>
     </li>
   </ul>
 
@@ -72,21 +87,39 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
     <div class="text-3xl w-full font-bold">Skills</div>
   </div>
 
+  <div class="mb-2">
+    <div class="text-xl w-full">Programming Languages</div>
+  </div>
+
   <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+    <li>C++</li>
+    <li>C</li>
+    <li>Python</li>
+    <li>JavaScript</li>
+    <li>Kotlin</li>
+    <li>SQL</li>
+  </ul>
+
+  <div>
+    <p class="my-4 text-justify">
+      <slot />
+    </p>
+  </div>
+
+  <div class="mb-2">
+    <div class="text-xl w-full">Frameworks and Tools</div>
+  </div>
+
+  <ul class="list-disc md:columns-5 columns-2 mx-6">
+    <li>ReactJS</li>
+    <li>NodeJS</li>
+    <li>GraphQL</li>
+    <li>AWS</li>
+    <li>Micronaut</li>
+    <li>Kafka</li>
+    <li>CockroachDB</li>
+    <li>MongoDB</li>
+    <li>Docker</li>
+    <li>ArgoCD</li>
   </ul>
 </BaseLayout>
