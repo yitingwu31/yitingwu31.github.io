@@ -3,6 +3,7 @@ const blogSchema = z.object({
     title: z.string(),
     description: z.string(),
     pubDate: z.coerce.date(),
+    link: z.string().optional(),
     updatedDate: z.string().optional(),
     heroImage: z.string().optional(),
     badge: z.string().optional(),
