@@ -6,7 +6,7 @@ import localizedFormat from "dayjs/plugin/localizedFormat";
 
 export interface Props extends BlogSchema {}
 
-const { title, description, pubDate, link, updatedDate, heroImage, badge, tags = [] } = Astro.props;
+const { title, description, pubDate, link, updatedDate, heroImage, badge, tags = [], hashtags = [] } = Astro.props;
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(pubDate).format("MMM, YYYY")
 import { Image } from "astro:assets";
@@ -24,7 +24,7 @@ import { Image } from "astro:assets";
         {tags && (
           <div>
             {tags.map((tag) => (
-              <a href={`/blog/tag/${tag}`} class="badge badge-outline ml-2 no-underline">
+              <a href={`/blog/tag/${tag}`} class="badge badge-outline mr-2 no-underline">
                 {tag}
               </a>
             ))}
@@ -44,7 +44,10 @@ import { Image } from "astro:assets";
           </div>
         )
       }
-      <div class="divider my-2"></div>
+      <div class="divider my-2" style="margin-bottom: -0.5rem;"></div>
+      <span class="hashtag-list text-sm text-gray-500" style="margin-top: 0.5rem;">
+        {hashtags.map((tag) => `#${tag}`).join(' ')}
+      </span>
       <slot />
     </article>
   </main>
