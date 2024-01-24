@@ -37,7 +37,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Experience</div>
+    <div class="text-3xl w-full font-bold">Work Experience</div>
   </div>
 
   <div class="time-line-container mb-10">
@@ -46,8 +46,11 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="SPAN.io, San Francisco"
       time="Jun - Aug, 2023"
     >
-      <li class="text-sm">Designed backend modules to track the connectivity between cloud and devices</li>
-      <li class="text-sm">Deployed using <b>Micronaut</b> framework, <b>AWS MQTT events</b>, <b>Snowflake</b>, <b>Cockroach DB</b> and <b>Kafka</b></li>
+      <li class="text-sm">Created traces and protobuf schema to track <b>fleet connectivity status</b> between AWS cloud and in-home smart panels</li>
+      <li class="text-sm">Orchestrated data broadcast and storage pipeline with Micronaut, MQTT protocols, Kafka, Snowflake and CockroachDB</li>
+      <li class="text-sm">Coordinated with support, data science and product teams to oversee <b>cross-functional product development</b></li>
+      <li class="text-sm">Attained 92% code coverage with unit testing and integration testing and successfully deployed to CI/CD pipeline</li>
+      <li class="text-sm">Achieved <b>20x less data transfer</b> per hour, while integrating data into Datadog for real-time monitoring</li>
       <p class="my-2 text-justify">
         <slot />
       </p>
@@ -57,8 +60,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       subtitle="Dell Technologies, Taipei"
       time="Jul - Aug, 2021"
     >
-      <li class="text-sm">Deployed back-end server data queries, front-end user interface and windows shell scripts testing program</li>
-      <li class="text-sm">Developed an automation testing system for PC BIOS setup tests</li>
+      <li class="text-sm">Introduced an <b>automation testing system</b> for PC BIOS setup tests</li>
+      <li class="text-sm">Pipelined machines to fetch latest BIOS version from server, run test scripts, and upload results to the test server</li>
+      <li class="text-sm">Deployed <b>front-end dashboard</b> for easy view of test results and interface to add tests items</li>
+      <li class="text-sm"><b>Lifted 2 workdays per week of workload</b> on test engineers while broadcasting test results to 2 more related teams</li>
       <p class="my-2 text-justify">
         <slot />
       </p>
@@ -109,7 +114,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <div class="mb-5">
-    <div class="text-3xl w-full font-bold">Certifications</div>
+    <div class="text-3xl w-full font-bold">Certificates</div>
   </div>
 
   <ul class="list-disc mx-6 mb-10 grid gap-2">

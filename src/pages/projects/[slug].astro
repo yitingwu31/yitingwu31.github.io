@@ -1,10 +1,11 @@
 ---
 import { CollectionEntry, getCollection } from "astro:content";
-import { BlogSchema } from "../../content/config";
+import { ProjectSchema } from "../../content/config";
 import PostLayout from "../../layouts/PostLayout.astro";
+import ProjectLayout from "@layouts/ProjectLayout.astro";
 
 export async function getStaticPaths() {
-  const postEntries = await getCollection("projects2");
+  const postEntries = await getCollection("projects");
   return postEntries.map((entry) => ({
     params: { slug: entry.slug },
     props: { entry },
@@ -12,24 +13,23 @@ export async function getStaticPaths() {
 }
 
 interface Props {
-  entry: CollectionEntry<"projects2">;
+  entry: CollectionEntry<"projects">;
 }
 
 const { entry } = Astro.props;
-const post: BlogSchema = entry.data;
+const post: ProjectSchema = entry.data;
 const { Content } = await entry.render();
 ---
 
-<PostLayout
+<ProjectLayout
   title={post.title}
   description={post.description}
   pubDate={post.pubDate}
   link={post.link}
   heroImage={post.heroImage}
   updatedDate={post.updatedDate}
-  badge={post.badge}
   tags={post.tags}
   hashtags={post.hashtags}
 >
   <Content />
-</PostLayout>
+</ProjectLayout>

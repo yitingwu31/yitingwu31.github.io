@@ -1,0 +1,53 @@
+---
+import { type ProjectSchema } from "../content/config";
+import BaseLayout from "./BaseLayout.astro";
+import dayjs from "dayjs";
+import localizedFormat from "dayjs/plugin/localizedFormat";
+
+export interface Props extends ProjectSchema {}
+
+const { title, description, pubDate, link, updatedDate, heroImage, tags = [], hashtags = [] } = Astro.props;
+dayjs.extend(localizedFormat);
+const displayDate = dayjs(pubDate).format("MMM, YYYY")
+import { Image } from "astro:assets";
+---
+
+<BaseLayout title={title} description={description} image={heroImage}>
+  <main class="md:flex md:justify-center">
+    <article class="prose prose-lg max-w-[900px] prose-img:mx-auto">
+      {heroImage && <Image width={600} height={300} format="webp" src={heroImage} alt={title} class="w-full mb-6" />}
+      <h1 class="title my-2 text-4xl font-bold">{title}</h1>
+      {pubDate && <time>{displayDate}</time>}
+      <br />
+      <div class="flex justify-between">
+        {tags && (
+          <div>
+            {tags.map((tag) => (
+              <a href={`/blog/tag/${tag}`} class="badge badge-outline mr-2 no-underline">
+                {tag}
+              </a>
+            ))}
+          </div>
+        )}
+        {link && (
+          <button type="button" class="ml-2 text-sm bg-orange-400 hover:bg-orange-500 text-white px-4 py-2 rounded">
+            <a href={link} target="_blank" class="no-underline" style="color: white">View github</a>
+          </button>
+        )}
+      </div>
+      {
+        updatedDate && (
+          <div>
+            {" "}
+            Last updated on <time>{updatedDate}</time>{" "}
+          </div>
+        )
+      }
+      <div class="divider my-2" style="margin-bottom: -0.5rem;"></div>
+      <span class="hashtag-list text-sm text-gray-500" style="margin-top: 0.5rem;">
+        {hashtags.map((tag) => `#${tag}`).join(' ')}
+      </span>
+      <slot />
+    </article>
+  </main>
+</BaseLayout>

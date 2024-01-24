@@ -5,6 +5,7 @@ pubDate: "Mar 2023"
 link: "https://github.com/yitingwu31/midi-chords"
 heroImage: "/post_img.webp"
 tags: ["HCI", "IoT"]
+hashtags: ["Teensy-4.0", "C++", "UX"]
 ---
 
 Music improvisation is a creative activity in which musicians compose in the moment. It involves communicating emotions, employing instrumental techniques, and responding spontaneously to other musicians. Although music improvisation can be enriching, it requires proficiency in instrumental performance and familiarity with musical theory, making it difficult for novices to participate. However, ChordKeys, a keyboard-like musical interface, provides an opportunity for novices to learn basic musical structure while improvising with simple structures. The system utilizes LED lights to guide users through different chord progressions and allows them to freely explore scales, notes, and percussion sets. It successfully achieves the goal of lowering the threshold for musical improvisation and provides an encouraging first step for novices in the musical education field.
