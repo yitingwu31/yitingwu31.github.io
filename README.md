@@ -1,3 +1,3 @@
-### My personal website [here](https://yitingwu31.github.io/ target="_blank")
+### My personal website <a href="https://yitingwu31.github.io/" target="_blank">here</a>
 
-Adapted from [Astrofy Template](https://github.com/manuelernestog/astrofy target="_blank") developed by Manuel Ernesto
+Adapted from <a href="https://github.com/manuelernestog/astrofy" target="_blank">Astrofy Template</a> developed by Manuel Ernesto
