@@ -1,5 +1,5 @@
 ---
-title: "mmWave Radar Sensing"
+title: "mmWave Radar Through-Wall Sensing"
 description: "An mmWave radar sensor that penetrates hard woodboard wall to count the number of people moving behind the wall."
 pubDate: "May 2023"
 link: "https://github.com/yitingwu31/mmwave-sensing"
