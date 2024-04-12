@@ -28,4 +28,5 @@ A crucial constraint of the problem is that due to the semi-transparency of the 
     3. In particular, when dispatching CUDA threads, we intentionally generate 2D block dimension, with block sizes the same as the block sizes used in step 1 to find intersection. With 2D block dimension, the pixel threads inside the same block will be accessing the same set of circles, hence, once we load the circle data into the block's shared cache, it is likely the data will be reused by other pixel threads and thus reduce cache capacity misses.
     4. I also paid special attention to replace any repeated pointer reference to value. That is, we want to load in an initial value of a pixel, render all the circles onto it, and then write the value back to the pixel, instead of calling the pixel repeatedly with pointer. This reduces memory access and saves a lot of time.
 
-*Due to Stanford Honor Code, the code of class assignment project cannot be disclosed. The report can be found [here](https://drive.google.com/file/d/1qfUK_NvOb94zBDc2ugq41yrXFQDTdHmT/view?usp=sharing)*
+The report can be found [here](https://drive.google.com/file/d/1qfUK_NvOb94zBDc2ugq41yrXFQDTdHmT/view?usp=sharing)<br>
+*Due to Stanford Honor Code, the code of class assignment project cannot be disclosed.*
